@@ -1,0 +1,9 @@
+backup/{domain_name}.sql
+backup/{domain_name}.sql.gz
+backup/{domain_name}.zip
+backups/{domain_name}.sql
+backups/{domain_name}.sql.gz
+backups/{domain_name}.zip
+{domain_name}.sql
+{domain_name}.sql.gz
+{domain_name}.zip
