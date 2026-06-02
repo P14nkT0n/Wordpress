@@ -1,0 +1,11 @@
+wp-wordlist()
+{
+    option="$1"
+    if [[ "$option" == *"plugin"* ]]; then
+        curl -s https://plugins.svn.wordpress.org/ | tail -n +5 | sed -e 's/<[^>]*>//g' -e 's/\///' -e 's/ \+//gp' | grep -v "Powered by Apache" | sort -u
+    elif [[ "$option" == *"theme"* ]]; then
+     curl -s https://themes.svn.wordpress.org/ | tail -n +5 | sed -e 's/<[^>]*>//g' -e 's/\///' -e 's/ \+//gp' | grep -v "Powered by Apache" | sort -u
+    fi
+}
+
+wp-wordlist "$1"
